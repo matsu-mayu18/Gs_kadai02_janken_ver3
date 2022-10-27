@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100;300;400&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="./css/reset.css" />
+    <link rel="stylesheet" href="./css/mystyle_ver3.css" />
+    <title>janken</title>
+  </head>
+  <body>
+    <!-- header -->
+    <header class="header">
+      <div class="header-wrap">
+        <img src="./img/rockscissorspapers.png" alt="" />
+
+        <ul class="header-list">
+          <li class="header-princess">
+            <a href="">プリンセスと<br />じゃんけん</a>
+          </li>
+          <li>
+            <a href="">画像認識で<br />じゃんけん</a>
+          </li>
+          <li>
+            <a href="">音声認識で<br />じゃんけん</a>
+          </li>
+        </ul>
+      </div>
+    </header>
+
+    <!-- main -->
+    <main class="main">
+      <section class="hero">
+        <div class="hero-wrapper">
+          <img src="./img/hero-img.png" alt="" />
+        </div>
+      </section>
+
+      <section id="janken">
+        <div class="janken-wrapper">
+          <div class="janken-title">
+            <h1>プリンセスとじゃんけん</h1>
+            <!-- <input type="button" value="Start" onclick="OnbuttonClick();" /> -->
+            <button class="start-button">
+              エルサと<br />じゃんけんを始める
+            </button>
+          </div>
+
+          <!-- player list -->
+          <div class="player-list">
+            <!-- player 1 -->
+            <div class="player-contents">
+              <h1 class="hand-title">あなたの手</h1>
+
+              <div class="player-me">
+                <div class="me_bg">
+                  <img src="./img/You.png" alt="" />
+                </div>
+
+                <!-- meの手 -->
+                <div class="me-img">
+                  <img src="./img/blank.png" alt="" />
+                </div>
+              </div>
+
+              <div>
+                <ul class="hand-btn-wrapper" id="my_hand">
+                  <li id="gu_btn_1" class="btn trigger">グー</li>
+                  <li id="cho_btn_1" class="btn trigger">チョキ</li>
+                  <li id="par_btn_1" class="btn trigger">パー</li>
+                </ul>
+              </div>
+            </div>
+            <!-- player 2 -->
+            <div class="player-contents">
+              <h1 class="hand-title">コンピュータの手</h1>
+              <div class="player-princess">
+                <div class="princess_bg">
+                  <img src="./img/Com.png" alt="" />
+                </div>
+
+                <!-- pcの手 -->
+                <div class="pc-img">
+                  <img src="./img/blank.png" alt="" />
+                </div>
+              </div>
+              <div>
+                <ul class="hand-btn-wrapper" id="pc_hand">
+                  <li id="gu_btn_2" class="btn">グー</li>
+                  <li id="cho_btn_2" class="btn">チョキ</li>
+                  <li id="par_btn_2" class="btn">パー</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <!-- 勝負判定 -->
+          <div class="result">
+            <div id="judgement" class="judgement">勝者は・・・</div>
+            <button class="reset">reset</button>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- footer -->
+    <footer class="footer">@copyrights Mayu Tani</footer>
+
+    <!-- jQueryのCDN: contents delivery network -->
+    <!-- 必ずjQueryが先!!! -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+    <!-- javascriptを読み込む -->
+    <!-- script + tab -->
+    <!-- test.jsの場所を指定 -->
+    <script src="./js/myjs.js"></script>
+  </body>
+</html>
